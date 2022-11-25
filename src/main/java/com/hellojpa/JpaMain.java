@@ -25,10 +25,13 @@ public class JpaMain {
 //      for (Member member : result) {
 //       System.out.println("member.getName = " + member.getName());
 //        }
-         Member member1 = new Member(30L, "A");
-         Member member2 = new Member(35L, "B");
-         em.persist(member1);
-         em.persist(member2);
+//         Member member1 = new Member(30L, "A");
+//         Member member2 = new Member(35L, "B");
+//         em.persist(member1);
+//         em.persist(member2);
+
+      Member member = em.find(Member.class, 30L);
+      member.setName("helloABC");
 
       System.out.println("==========================");
 
